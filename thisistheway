@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Mindfuck - Index Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+        .article-list li {
+            background: #007BFF;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .article-list li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .article-list li:hover {
+            background: #0056b3;
+        }
+        .search-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-box input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Mindfuck - Index Library</h1>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search articles..." onkeyup="filterArticles()">
+        </div>
+        <ul class="article-list" id="articleList">
+            <li><a href="#">Introduction to Project Mindfuck</a></li>
+            <li><a href="#">Advanced Concepts in AI</a></li>
+            <li><a href="#">Cognitive Science and Human Behavior</a></li>
+            <li><a href="#">Data Science and Predictive Analytics</a></li>
+            <li><a href="#">Machine Learning Models Explained</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function filterArticles() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let articles = document.getElementById('articleList').getElementsByTagName('li');
+            
+            for (let i = 0; i < articles.length; i++) {
+                let text = articles[i].textContent.toLowerCase();
+                if (text.includes(input)) {
+                    articles[i].style.display = "block";
+                } else {
+                    articles[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
