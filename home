@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Wiki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #007BFF;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        li:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Internal Wiki</h1>
+        <p>Welcome to the internal wiki. Select a topic below:</p>
+        <ul>
+            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Best Practices</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </div>
+</body>
+</html>
